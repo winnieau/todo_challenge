@@ -13,14 +13,14 @@
 
   <body>
     <div ng-controller="ToDoController">
-      <form name="form" ng-submit="addToDo">
+      <form name="form" ng-submit="addToDo()">
         <input type="text" name="newtodo" ng-model="newtodo" required />
         <button ng-disabled="form.$invalid">Add</button>
       </form>
       <button ng-click="clearCompleted()">Clear Completed Tasks</button>
       <ul>
-        <li ng-repeat="todo in todos">
-          {{todo.title}}
+        <li ng-repeat="title in displayList">
+          <!-- {{todo.title}} -->
         </li>
       </ul>
     </div>
